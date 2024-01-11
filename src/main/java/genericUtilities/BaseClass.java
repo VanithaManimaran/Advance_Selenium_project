@@ -40,7 +40,9 @@ public class BaseClass {
 	{
 		String URL = pUtil.readDataFromPropertyFile("url");
 		
-		driver = new EdgeDriver();
+		//driver = new EdgeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
 		
 //		if(Browser.equalsIgnoreCase("Edge"))
 //		{
